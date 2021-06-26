@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "495621400004",
+    "firebase_url": "https://contatoskt-cefc1-default-rtdb.firebaseio.com",
+    "project_id": "contatoskt-cefc1",
+    "storage_bucket": "contatoskt-cefc1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:495621400004:android:16ea48bb9aa4e46d92f091",
+        "android_client_info": {
+          "package_name": "br.edu.ifsp.scl.ads.pdm.contatoskt"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "495621400004-p8rl5q361cv4jo5g7csmt66jgr41okm7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDEeyXZR2zHKs3Yw0sipL1Vx0q8G4YheYw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "495621400004-p8rl5q361cv4jo5g7csmt66jgr41okm7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

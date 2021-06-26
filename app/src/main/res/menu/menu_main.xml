@@ -7,5 +7,9 @@
         android:title="@string/novo_contato"
         android:icon="@drawable/ic_novo_contato"
         app:showAsAction="ifRoom" />
-
+    <item
+        android:id="@+id/sairMi"
+        android:title="Sair"
+        android:icon="@drawable/ic_sair"
+        app:showAsAction="ifRoom" />
 </menu>

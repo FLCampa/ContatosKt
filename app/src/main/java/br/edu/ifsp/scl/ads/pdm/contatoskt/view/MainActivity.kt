@@ -12,6 +12,7 @@ import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContract
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.recyclerview.widget.LinearLayoutManager
+import br.edu.ifsp.scl.ads.pdm.contatoskt.AutenticacaoFirebase
 import br.edu.ifsp.scl.ads.pdm.contatoskt.R
 import br.edu.ifsp.scl.ads.pdm.contatoskt.adapter.ContatosAdapter
 import br.edu.ifsp.scl.ads.pdm.contatoskt.adapter.OnContatoClickListener
@@ -76,6 +77,13 @@ class MainActivity : AppCompatActivity(), OnContatoClickListener {
         }
     }
 
+    override fun onStart() {
+        super.onStart()
+        if (AutenticacaoFirebase.firebaseAuth.currentUser == null) {
+            finish()
+        }
+    }
+
     override fun onContatoClick(posicao: Int) {
         val contato: Contato = contatosList[posicao]
         Toast.makeText(this, contato.toString(), Toast.LENGTH_SHORT).show()
@@ -86,14 +94,19 @@ class MainActivity : AppCompatActivity(), OnContatoClickListener {
         return true
     }
 
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        if (item.itemId == R.id.novoContatoMi) {
+    override fun onOptionsItemSelected(item: MenuItem) = when (item.itemId) {
+        R.id.novoContatoMi -> {
             // abrir a tela de novo contato
             val novoContatoIntent: Intent = Intent(this, ContatoActivity::class.java)
             novoContatoLauncher.launch(novoContatoIntent)
-            return true
+            true
         }
-        return false
+        R.id.sairMi -> {
+            AutenticacaoFirebase.firebaseAuth.signOut()
+            true
+        }
+        else -> {
+            false
+        }
     }
-
 }

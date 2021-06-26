@@ -9,14 +9,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ContatosKt">
-        <activity android:name=".view.ContatoActivity"></activity>
-        <activity android:name=".view.MainActivity">
+        <activity android:name=".view.RecuperarSenhaActivity"></activity>
+        <activity android:name=".view.CadastrarActivity" />
+        <activity android:name=".view.AutenticacaoActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".view.ContatoActivity" />
+        <activity android:name=".view.MainActivity" />
+
     </application>
 
 </manifest>
