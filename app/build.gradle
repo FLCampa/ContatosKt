@@ -56,4 +56,7 @@ dependencies {
 
     // bibliotecas para autenticação
     implementation 'com.google.firebase:firebase-auth-ktx'
+
+    // autenticação google
+    implementation 'com.google.android.gms:play-services-auth:19.0.0'
 }

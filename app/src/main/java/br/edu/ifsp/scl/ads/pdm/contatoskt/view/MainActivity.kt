@@ -103,6 +103,8 @@ class MainActivity : AppCompatActivity(), OnContatoClickListener {
         }
         R.id.sairMi -> {
             AutenticacaoFirebase.firebaseAuth.signOut()
+            // se existe uma conta autenticada google, o processo de sign out é realizado
+            AutenticacaoFirebase.googleSignInClient?.signOut()
             true
         }
         else -> {
